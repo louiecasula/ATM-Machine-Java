@@ -81,7 +81,8 @@ public class OptionMenu {
 				System.out.println(" Type 2 - Withdraw Funds");
 				System.out.println(" Type 3 - Deposit Funds");
 				System.out.println(" Type 4 - Transfer Funds");
-				System.out.println(" Type 5 - Exit");
+				System.out.println(" Type 5 - View Statement");
+				System.out.println(" Type 6 - Exit");
 				System.out.print("\nChoice: ");
 
 				int selection = menuInput.nextInt();
@@ -101,6 +102,10 @@ public class OptionMenu {
 					acc.getTransferInput("Checking");
 					break;
 				case 5:
+					System.out.println("\nChecking Account Balance: " + moneyFormat.format(acc.getCheckingBalance()));
+					System.out.println("Savings Account Balance: " + moneyFormat.format(acc.getSavingBalance()));
+					break;
+				case 6:
 					end = true;
 					break;
 				default:
@@ -122,7 +127,8 @@ public class OptionMenu {
 				System.out.println(" Type 2 - Withdraw Funds");
 				System.out.println(" Type 3 - Deposit Funds");
 				System.out.println(" Type 4 - Transfer Funds");
-				System.out.println(" Type 5 - Exit");
+				System.out.println(" Type 5 - View Statement");
+				System.out.println(" Type 6 - Exit");
 				System.out.print("Choice: ");
 				int selection = menuInput.nextInt();
 				switch (selection) {
@@ -139,6 +145,10 @@ public class OptionMenu {
 					acc.getTransferInput("Savings");
 					break;
 				case 5:
+					System.out.println("\nChecking Account Balance: " + moneyFormat.format(acc.getCheckingBalance()));
+					System.out.println("Savings Account Balance: " + moneyFormat.format(acc.getSavingBalance()));
+					break;
+				case 6:
 					end = true;
 					break;
 				default:
